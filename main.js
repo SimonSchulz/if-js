@@ -36,3 +36,46 @@ for(let i=0;i<arr3.length;i++){
         console.log(arr3[i]);
     }
 }
+
+//lesson-3
+
+//palindrome
+function palindrome(str){
+    str = str.toLowerCase();
+    for(let i=0;i<str.length/2;i++) {
+        if (str[i] !== str[str.length - (i + 1)]) {
+            return `ne palindrome`;
+        }
+        if (i===str.length/2-1 || i>=str.length/2-1) {
+            return `palindrome`;
+        }
+    }
+}
+console.log(palindrome("Ohoho"));
+
+//min
+function min(a,b){
+    let result = a<=b?a:b;
+    console.log(result);
+}
+min(1,2);
+
+//max
+function max(a,b){
+    let result = a>=b?a:b;
+    console.log(result);
+}
+max(1,2);
+
+//напишите функцию, которая будет заменять все 0 на строку 'zero';
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random() * 100));
+}
+console.log(arr);
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 10 === 0) {
+        arr[i] = arr[i].toString().replaceAll('0', 'zero');
+    }
+}
+console.log(arr);
