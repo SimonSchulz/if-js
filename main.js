@@ -125,3 +125,64 @@ function changeColor () {
 textFirst.addEventListener('click', changeColor());
 textSecond.addEventListener('click', changeColor());
 textThird.addEventListener('click', changeColor());
+
+//lesson-5
+//'2020-11-26' v 26.11.2020
+let str = '2020-11-22';
+function date(str) {
+    console.log(str.split(/\D/g).reverse().join('.'));
+    return str;
+}
+
+//Поиск объектов размещения
+const data = [
+    {
+        country: 'Russia',
+        city: 'Saint Petersburg',
+        hotel: 'Hotel Leopold',
+    },
+    {
+        country: 'Spain',
+        city: 'Santa Cruz de Tenerife',
+        hotel: 'Apartment Sunshine',
+    },
+    {
+        country: 'Slowakia',
+        city: 'Vysokie Tatry',
+        hotel: 'Villa Kunerad',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hostel Friendship',
+    },
+    {
+        country: 'Indonesia',
+        city: 'Bali',
+        hotel: 'Ubud Bali Resort&SPA',
+    },
+    {
+        country: 'Netherlands',
+        city: 'Rotterdam',
+        hotel: 'King Kong Hostel',
+    },
+    {
+        country: 'Marocco',
+        city: 'Ourika',
+        hotel: 'Rokoko Hotel',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hotel Rehberge Berlin Mitte',
+    },
+];
+function searchLocation(str){
+    str=str.toLowerCase();
+    for(let i=0;i<data.length;i++){
+        if(data[i].country.toLowerCase() === str || data[i].city.toLowerCase() === str || data[i].hotel.toLowerCase() === str){
+            console.log(data[i]);
+        }
+    }
+}
+searchLocation("Germany");
