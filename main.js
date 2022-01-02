@@ -1,130 +1,130 @@
-//работа с переменными
-let user = "John Doe";
-console.log(user);
-let student = "Семён";
-console.log(student);
-user = student;
-console.log(user);
-
-//работа с примитивами
-let test = 1;
-test++;//2
-test += "1";
-console.log(test);//21
-test -= 1;
-console.log(test);//20
-test = Boolean(test);
-console.log(test);//true
-// вывести произведение числе массива
-let arr1 = [2, 3, 5, 8];
-let count = arr1[0];
-for (let i = 1; i < arr1.length; i++) {
-    count *= arr1[i];
-}
-console.log(count);
-//вывести 5<x<10
-let arr2 = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i] > 5 && arr2[i] < 10) {
-        console.log(arr2[i]);
-    }
-}
-//вывести четные
-let arr3 = [2, 5, 8, 15, 0, 6, 20, 3];
-for (let i = 0; i < arr3.length; i++) {
-    if (arr3[i] % 2 === 0) {
-        console.log(arr3[i]);
-    }
-}
-
-//lesson-3
-
-//palindrome
-function palindrome(str) {
-    str = str.toLowerCase();
-    for (let i = 0; i < str.length / 2; i++) {
-        if (str[i] !== str[str.length - (i + 1)]) {
-            return `ne palindrome`;
-        }
-        if (i === str.length / 2 - 1 || i >= str.length / 2 - 1) {
-            return `palindrome`;
-        }
-    }
-}
-
-console.log(palindrome("Ohoho"));
-
-//palindrome 2
-function palindrome(arg) {
-    return (arg.toLowerCase() === arg.toLowerCase().split('').reverse().join('')) ? 'palindrome' : 'not palindrome';
-}
-
-//min
-function min(a, b) {
-    let result = (a < b) ? a : b;
-    console.log(result);
-}
-
-min(1, 2);
-
-//max
-function max(a, b) {
-    let result = (a > b) ? a : b;
-    console.log(result);
-}
-
-max(1, 2);
-
-//напишите функцию, которая будет заменять все 0 на строку 'zero';
-let arr = [];
-let min = 0;
-let max = 100;
-for (let i = 0; i < 10; i++) {
-    arr.push(Math.round(Math.random() * (max - min)));
-}
-console.log(arr);
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 100 === 0) {
-        arr[i] = arr[i] / 100 + 'zerozero';
-    }
-    if (arr[i] % 10 === 0) {
-        arr[i] = arr[i] / 10 + 'zero';
-    }
-}
-console.log(arr);
-
-//lesson 4
-function sum(a) {
-    let currentSum = a;
-    function f(b) {
-        currentSum += b;
-        return f;
-    }
-    f.toString = function() {
-        return currentSum;
-    };
-    return f;
-}
-console.log(sum(5)(2));
-
-//change color by click
-const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-let textFirst = document.getElementById("text1");
-let textSecond = document.getElementById("text2");
-let textThird = document.getElementById("text3");
-function changeColor () {
-    let i = 0;
-    return function () {
-        this.style.color = colors[i];
-        i++;
-        if (i === colors.length) {
-            i = 0;
-        }
-    }
-}
-textFirst.addEventListener('click', changeColor());
-textSecond.addEventListener('click', changeColor());
-textThird.addEventListener('click', changeColor());
+// //работа с переменными
+// let user = "John Doe";
+// console.log(user);
+// let student = "Семён";
+// console.log(student);
+// user = student;
+// console.log(user);
+//
+// //работа с примитивами
+// let test = 1;
+// test++;//2
+// test += "1";
+// console.log(test);//21
+// test -= 1;
+// console.log(test);//20
+// test = Boolean(test);
+// console.log(test);//true
+// // вывести произведение числе массива
+// let arr1 = [2, 3, 5, 8];
+// let count = arr1[0];
+// for (let i = 1; i < arr1.length; i++) {
+//     count *= arr1[i];
+// }
+// console.log(count);
+// //вывести 5<x<10
+// let arr2 = [2, 5, 8, 15, 0, 6, 20, 3];
+// for (let i = 0; i < arr2.length; i++) {
+//     if (arr2[i] > 5 && arr2[i] < 10) {
+//         console.log(arr2[i]);
+//     }
+// }
+// //вывести четные
+// let arr3 = [2, 5, 8, 15, 0, 6, 20, 3];
+// for (let i = 0; i < arr3.length; i++) {
+//     if (arr3[i] % 2 === 0) {
+//         console.log(arr3[i]);
+//     }
+// }
+//
+// //lesson-3
+//
+// //palindrome
+// function palindrome(str) {
+//     str = str.toLowerCase();
+//     for (let i = 0; i < str.length / 2; i++) {
+//         if (str[i] !== str[str.length - (i + 1)]) {
+//             return `ne palindrome`;
+//         }
+//         if (i === str.length / 2 - 1 || i >= str.length / 2 - 1) {
+//             return `palindrome`;
+//         }
+//     }
+// }
+//
+// console.log(palindrome("Ohoho"));
+//
+// //palindrome 2
+// function palindrome2(arg) {
+//     return (arg.toLowerCase() === arg.toLowerCase().split('').reverse().join('')) ? 'palindrome' : 'not palindrome';
+// }
+//
+// //min
+// function minNum(a, b) {
+//     let result = (a < b) ? a : b;
+//     console.log(result);
+// }
+//
+// min(1, 2);
+//
+// //max
+// function maxNum(a, b) {
+//     let result = (a > b) ? a : b;
+//     console.log(result);
+// }
+//
+// max(1, 2);
+//
+// //напишите функцию, которая будет заменять все 0 на строку 'zero';
+// let arr = [];
+// let min = 0;
+// let max = 100;
+// for (let i = 0; i < 10; i++) {
+//     arr.push(Math.round(Math.random() * (max - min)));
+// }
+// console.log(arr);
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 100 === 0) {
+//         arr[i] = arr[i] / 100 + 'zerozero';
+//     }
+//     if (arr[i] % 10 === 0) {
+//         arr[i] = arr[i] / 10 + 'zero';
+//     }
+// }
+// console.log(arr);
+//
+// //lesson 4
+// function sum(a) {
+//     let currentSum = a;
+//     function f(b) {
+//         currentSum += b;
+//         return f;
+//     }
+//     f.toString = function() {
+//         return currentSum;
+//     };
+//     return f;
+// }
+// console.log(sum(5)(2));
+//
+// //change color by click
+// const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+// let textFirst = document.getElementById("text1");
+// let textSecond = document.getElementById("text2");
+// let textThird = document.getElementById("text3");
+// function changeColor () {
+//     let i = 0;
+//     return function () {
+//         this.style.color = colors[i];
+//         i++;
+//         if (i === colors.length) {
+//             i = 0;
+//         }
+//     }
+// }
+// textFirst.addEventListener('click', changeColor());
+// textSecond.addEventListener('click', changeColor());
+// textThird.addEventListener('click', changeColor());
 
 //lesson-5
 //'2020-11-26' v 26.11.2020
@@ -186,3 +186,206 @@ function searchLocation(str){
     }
 }
 searchLocation("Germany");
+
+//lesson-6
+
+//palindrome 3
+function palindrome3(arg) {
+    return (arg.toLowerCase() === arg.toLowerCase().split('').reverse().join('')) ? 'palindrome' : 'not palindrome';
+}
+
+const hotels = [
+    {
+        name: 'Hotel Leopold',
+        city: 'Saint Petersburg',
+        country: 'Russia',
+    },
+    {
+        name: 'Apartment Sunshine',
+        city: 'Santa Cruz de Tenerife',
+        country: 'Spain',
+    },
+    {
+        name: 'Villa Kunerad',
+        city: 'Vysokie Tatry',
+        country: 'Slowakia',
+    },
+    {
+        name: 'Hostel Friendship',
+        city: 'Berlin',
+        country: 'Germany',
+    },
+    {
+        name: 'Radisson Blu Hotel',
+        city: 'Kyiv',
+        country: 'Ukraine',
+    },
+    {
+        name: 'Paradise Hotel',
+        city: 'Guadalupe',
+        country: 'Mexico',
+    },
+    {
+        name: 'Hotel Grindewald',
+        city: 'Interlaken',
+        country: 'Switzerland',
+    },
+    {
+        name: 'The Andaman Resort',
+        city: 'Port Dickson',
+        country: 'Malaysia',
+    },
+    {
+        name: 'Virgin Hotel',
+        city: 'Chicago',
+        country: 'USA',
+    },
+    {
+        name: 'Grand Beach Resort',
+        city: 'Dubai',
+        country: 'United Arab Emirates',
+    },
+    {
+        name: 'Shilla Stay',
+        city: 'Seoul',
+        country: 'South Korea',
+    },
+    {
+        name: 'San Firenze Suites',
+        city: 'Florence',
+        country: 'Italy',
+    },
+    {
+        name: 'The Andaman Resort',
+        city: 'Port Dickson',
+        country: 'Malaysia',
+    },
+    {
+        name: 'Black Penny Villas',
+        city: 'BTDC, Nuca Dua',
+        country: 'Indonesia',
+    },
+    {
+        name: 'Koko Hotel',
+        city: 'Tokyo',
+        country: 'Japan',
+    },
+    {
+        name: 'Ramada Plaza',
+        city: 'Istanbul',
+        country: 'Turkey',
+    },
+    {
+        name: 'Waikiki Resort Hotel',
+        city: 'Hawaii',
+        country: 'USA',
+    },
+    {
+        name: 'Puro Hotel',
+        city: 'Krakow',
+        country: 'Poland',
+    },
+    {
+        name: 'Asma Suites',
+        city: 'Santorini',
+        country: 'Greece',
+    },
+    {
+        name: 'Cityden Apartments',
+        city: 'Amsterdam',
+        country: 'Netherlands',
+    },
+    {
+        name: 'Mandarin Oriental',
+        city: 'Miami',
+        country: 'USA',
+    },
+    {
+        name: 'Concept Terrace Hotel',
+        city: 'Rome',
+        country: 'Italy',
+    },
+    {
+        name: 'Ponta Mar Hotel',
+        city: 'Fortaleza',
+        country: 'Brazil',
+    },
+    {
+        name: 'Four Seasons Hotel',
+        city: 'Sydney',
+        country: 'Australia',
+    },
+    {
+        name: 'Le Meridien',
+        city: 'Nice',
+        country: 'France',
+    },
+    {
+        name: 'Apart Neptun',
+        city: 'Gdansk',
+        country: 'Poland',
+    },
+    {
+        name: 'Lux Isla',
+        city: 'Ibiza',
+        country: 'Spain',
+    },
+    {
+        name: 'Nox Hostel',
+        city: 'London',
+        country: 'UK',
+    },
+    {
+        name: 'Leonardo Vienna',
+        city: 'Vienna',
+        country: 'Austria',
+    },
+    {
+        name: 'Adagio Aparthotel',
+        city: 'Edinburgh',
+        country: 'UK',
+    },
+    {
+        name: 'Steigenberger Hotel',
+        city: 'Hamburg',
+        country: 'Germany',
+    },
+];
+
+//тестил, поэтому 3 решения
+// function hotelSearch1 (str){
+//     for (let i=0; i < hotels.length; i++){
+//         if(Object.values(hotels[i]).includes(str)){
+//             console.log(hotels[i])
+//         }
+//     }
+// }
+
+// function hotelSearch2 (str){
+//     return hotels.filter(hotels => Object.values(hotels).includes(str));
+// }
+// hotelSearch2('Germany');
+
+
+function hotelSearch3 (str) {
+    return hotels.reduce((acc, item) => {
+        if (Object.values(item).includes(str)) {
+            acc.push(Object.values(item).toString())
+        }
+        return acc;
+    }, [])
+}
+console.log(hotelSearch3("UK"));
+
+//Сопоставьте страны с городами из массива
+function sortCity(hotels) {
+    return hotels.reduce((acc, item) => {
+        if (!acc.hasOwnProperty(item.country)) {
+            acc[item.country] = [item.city];
+        } else {
+            acc[item.country].push(item.city);
+        }
+        return acc;
+    }, {})
+}
+console.log(sortCity(hotels));
