@@ -389,3 +389,86 @@ function sortCity(hotels) {
     }, {})
 }
 console.log(sortCity(hotels));
+
+// function sortCity(hotels) {
+//     let result = {};
+//     for (let obj of hotels){
+//         if (!result.hasOwnProperty(obj.country)) {
+//             result[obj.country] = [obj.city];
+//         } else {
+//             result[obj.country].push(obj.city);
+//         }
+//     }
+//     return result;
+// }
+// console.log(sortCity(hotels));
+
+
+//lesson-7
+
+const obj1 = {
+    a: 'a',
+    b: {
+        a: 'a',
+        b: 'b',
+        c: {
+            a: 1,
+        },
+    },
+};
+const obj2 = {
+    b: {
+        c: {
+            a: 1,
+        },
+        b: 'b',
+        a: 'a',
+    },
+    a: 'a',
+};
+const obj3 = {
+    a: {
+        c: {
+            a: 'a',
+        },
+        b: 'b',
+        a: 'a',
+    },
+    b: 'b',
+};
+
+function deepEqual (obj1, obj2){
+    if(Object.getOwnPropertyNames(obj1).length !== Object.getOwnPropertyNames(obj2).length){
+        return false;
+    }
+    for(let propName in obj1){
+        if (!obj2.hasOwnProperty(propName)) {
+            return false;
+        }
+        if(obj1[propName].valueOf() !== obj2[propName].valueOf()){
+            if(!deepEqual(obj1[propName], obj2[propName]) ){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+// function deepEqual(obj1, obj2) {
+//     const props1 = Object.getOwnPropertyNames(obj1);
+//     const props2 = Object.getOwnPropertyNames(obj2);
+//     if (props1.length !== props2.length) {
+//         return false;
+//     }
+//     for (let i = 0; i < props1.length; i++) {
+//         const prop = props1[i];
+//         const bothAreObjects = typeof(obj1[prop]) === 'object' && typeof(obj2[prop]) === 'object';
+//         if ((!bothAreObjects && (obj1[prop] !== obj2[prop]))
+//             || (bothAreObjects && !deepEqual(obj1[prop], obj2[prop]))) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+deepEqual(obj1, obj2); // true
+deepEqual(obj1, obj3); // false
