@@ -535,3 +535,16 @@ class Students {
 }
 const students = new Students(studentsData.map(student => new Student(student)));
 console.log(students.getInfo());
+
+/*
+Find the kth largest element in an unsorted array.
+Note that it is the kth largest element in the sorted order,
+not the kth distinct element.
+For example, given [3,2,1,5,6,4] and k = 2, return 5.
+*/
+function arrBig(arr, k){
+    arr.sort((a, b) => b-a);
+    return arr[k-1];
+}
+console.log(arrBig([3,2,1,5,6,4],2));
+// если надо уникальные, можно через Set
