@@ -94,6 +94,13 @@
 // console.log(arr);
 //
 // //lesson 4
+
+// function sum(a) {
+//     return function f(b) {
+//         return a + b;
+//     }
+// }
+
 // function sum(a) {
 //     let currentSum = a;
 //     function f(b) {
