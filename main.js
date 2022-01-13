@@ -481,7 +481,6 @@ deepEqual(obj1, obj2); // true
 deepEqual(obj1, obj3); // false
 
 // lesson-8
-
 const studentsData = [
     {
         firstName: 'Василий',
@@ -524,16 +523,19 @@ class Student extends User {
         this.courseName = courseName;
     }
     get course (){
-        return new Date().getFullYear() - this.admissionYear;
+        let year = new Date().getFullYear();
+        return year - this.admissionYear > 0 ? year - this.admissionYear : 1;
     }
 }
 class Students {
     constructor(students) {
         this.students = students;
     }
+    sortCourse=()=>{
+        this.students.sort((a, b) => a.course - b.course);
+    }
     getInfo() {
         let result =[];
-        this.students.sort((a, b) => a.course - b.course);
         for (let obj of this.students){
             result.push(`${obj.fullName} - ${obj.courseName}, ${obj.course} курс`);
         }
@@ -541,6 +543,7 @@ class Students {
     }
 }
 const students = new Students(studentsData.map(student => new Student(student)));
+students.sortCourse();
 console.log(students.getInfo());
 
 /*

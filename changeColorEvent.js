@@ -1,4 +1,4 @@
-//lesson
+//lesson 9
 const colors = {
     data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
     [Symbol.iterator]() {
