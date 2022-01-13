@@ -1,18 +1,30 @@
-//change color by click
-const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-let textFirst = document.getElementById("text1");
-let textSecond = document.getElementById("text2");
-let textThird = document.getElementById("text3");
-function changeColor () {
-    let i = 0;
-    return function () {
-        this.style.color = colors[i];
-        i++;
-        if (i === colors.length) {
-            i = 0;
+//lesson
+const colors = {
+    data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
+    [Symbol.iterator]() {
+        const arr = this.data;
+        return {
+            next(index) {
+                return {
+                    value: arr[index],
+                    done: index === arr.length
+                }
+            }
         }
     }
 }
-textFirst.addEventListener('click', changeColor());
-textSecond.addEventListener('click', changeColor());
-textThird.addEventListener('click', changeColor());
+function changeStyle (){
+    let i = 0;
+    return function () {
+        let iterator = colors[Symbol.iterator]();
+            this.style.color = iterator.next(i).value;
+            i++;
+            if(iterator.next(i).done){
+                i=0;
+            }
+    }
+}
+document.getElementById("text1").addEventListener('click', changeStyle());
+document.getElementById("text2").addEventListener('click', changeStyle());
+document.getElementById("text3").addEventListener('click', changeStyle());
+
