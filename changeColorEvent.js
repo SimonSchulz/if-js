@@ -34,8 +34,8 @@ const colors = {
     data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
 };
 function* gen() {
-    for(let i = 0; i<colors.data.length; i++){
-       yield colors.data[i];
+    for(let element of colors.data){
+       yield element;
     }
 }
 function changeStyle() {
