@@ -448,19 +448,22 @@ function deepEqual (obj1, obj2){
     if(Object.getOwnPropertyNames(obj1).length !== Object.getOwnPropertyNames(obj2).length){
         return false;
     }
-    for(let propName in obj1){
-        if (!obj2.hasOwnProperty(propName)) {
+    for(let prop in obj1){
+        if (!obj2.hasOwnProperty(prop)) {
             return false;
         }
-        if(obj1[propName].valueOf() !== obj2[propName].valueOf()){
-            if(!deepEqual(obj1[propName], obj2[propName]) ){
+        if(obj1[prop]!==obj2[prop]){
+            let isObject = typeof obj1[prop] === 'object' && typeof obj2[prop] === 'object';
+            if(!isObject){
+                return false;
+            }
+            if(!deepEqual(obj1[prop], obj2[prop]) ){
                 return false;
             }
         }
     }
     return true;
 }
-
 // function deepEqual(obj1, obj2) {
 //     const props1 = Object.getOwnPropertyNames(obj1);
 //     const props2 = Object.getOwnPropertyNames(obj2);
@@ -480,6 +483,24 @@ function deepEqual (obj1, obj2){
 deepEqual(obj1, obj2); // true
 deepEqual(obj1, obj3); // false
 
+//calender
+function getCalendarMonth(daysInMonth, daysInWeek, dayOfWeek){
+    const result = [];
+    let weeks=Math.ceil((daysInMonth+dayOfWeek)/daysInWeek),
+        daysCounter=(daysInMonth+1)-dayOfWeek;
+    for (let i=0;i<weeks;i++){
+        const daysOfWeek = [];
+        for(let j=0;j<daysInWeek;j++){
+            if(daysCounter > daysInMonth){
+                daysCounter=1;
+            }
+            daysOfWeek.push(daysCounter++);
+        }
+        result.push(daysOfWeek);
+    }
+    return result;
+}
+console.log(getCalendarMonth(28,7,1));
 // lesson-8
 const studentsData = [
     {
