@@ -1,0 +1,1076 @@
+@import "font-roboto.css"
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+.container
+  max-width: 1224px
+  margin: 0 auto
+  font-family: Roboto, sans-serif
+
+.header
+  position: relative
+  background-image: url("../images/castel.png")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  height: 100vh
+  min-height: 900px
+
+  .dark
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    padding-top: 50px
+    background: rgba(18, 18, 18, 0.25)
+
+    .header_logo
+      height: 40px
+      width: 205px
+
+    .header_nav
+      display: flex
+      justify-content: space-between
+
+    .nav, .header_nav_img
+      display: flex
+      align-items: center
+
+    .header_nav_img
+      .night_theme
+        width: 30px
+        height: 30px
+        fill: white
+        &:hover
+          fill: #F5BD41
+      .account_circle
+        width: 40px
+        height: 40px
+        fill: white
+        &:hover
+          fill: #F5BD41
+
+    .hamburger-menu
+      display: none
+      padding-left: 24px
+      align-self: center
+
+    #menu__toggle
+      opacity: 0
+
+    .menu__btn
+      display: none
+      width: 26px
+      height: 26px
+      cursor: pointer
+
+      span
+        display: block
+        position: absolute
+        width: 24px
+        height: 3px
+        background-color: #FFFFFF
+
+        &::before, &::after
+          display: block
+          position: absolute
+          width: 24px
+          height: 3px
+          background-color: #FFFFFF
+
+        &::before
+          content: ''
+          top: -8px
+
+        &::after
+          content: ''
+          top: 8px
+
+    .menu__box
+      display: block
+      position: fixed
+      visibility: hidden
+      top: 0
+      width: 150px
+      margin: 0
+      padding: 15px 0
+      list-style: none
+      text-align: center
+
+    .menu__item
+      display: block
+      position: relative
+      padding: 12px 24px
+      font-size: 20px
+      text-decoration: none
+      color: #FFFFFF
+
+    #menu__toggle:checked ~.menu__btn
+      span
+        transform: rotate(45deg)
+
+        &::before
+          top: 0
+          transform: rotate(0)
+
+        &::after
+          top: 0
+          transform: rotate(90deg)
+
+    #menu__toggle:checked ~ .menu__box
+      visibility: visible
+      right: 0
+      top: 5%
+
+    .header_nav_link
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      color: #FFFFFF
+      text-decoration: none
+      margin-right: 24px
+      position: relative
+
+      &::after
+        margin-top: 12px
+        content: ""
+        position: absolute
+        left: 10%
+        display: block
+        background: none repeat scroll 0 0 transparent
+        height: 4px
+        transition: 0.5s
+
+      &:hover::after
+        background: #F5BD41
+        width: 80%
+
+    .header_nav_img
+      a
+        padding-left: 24px
+
+    h1
+      margin-top: 200px
+      font-style: normal
+      font-weight: 500
+      font-size: 50px
+      line-height: 59px
+      color: #FFFFFF
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+    .header_form
+      margin-top: 146px
+      display: flex
+      background: #ffffff
+      border-radius: 8px
+      font-size: 21px
+
+    .loupe
+      display: none
+
+    .header_form_destination
+      position: relative
+
+      label
+        position: absolute
+        left: 24px
+        top: 33%
+
+      input
+          font-size: 18px
+          padding: 21px 22px
+
+    .form_destinations
+      width: 100%
+      height: 100%
+      border: none
+      border-radius: 8px
+
+    .header_form_check
+      position: relative
+      display: flex
+      border: none
+
+    .check_in, .check_out
+      height: 100%
+      width: 50%
+      border: none
+      font-size: 18px
+      padding: 21px 22px
+      border-radius: 8px
+
+    .header_form_check
+      label
+        &:first-of-type
+          position: absolute
+          left: 5%
+          top: 33%
+
+        &:nth-of-type(2)
+          position: absolute
+          top: 33%
+          left: 55%
+
+    .header_form_people
+      position: relative
+
+      input
+        width: 100%
+        height: 100%
+        border: none
+        font-size: 18px
+        padding: 21px 22px
+        border-radius: 8px
+
+      label
+        position: absolute
+        left: 24px
+        top: 33%
+
+      input:focus + label
+        transform: translateY(-60px)
+        font-size: 21px
+        padding: 0
+        color: #ffffff
+
+
+    .header_form_destination input:focus + label, .check_in:focus + label, .check_out:focus + label
+      transform: translateY(-60px)
+      font-size: 21px
+      padding: 0
+      color: #ffffff
+
+    .form_btn
+      width: 100%
+      height: 100%
+      background: #3077C6
+      color: #ffff
+      padding: 15px 22px
+      font-size: 24px
+      border: none
+      border-radius: 8px
+
+    .header_store_links
+      margin-top: 120px
+      display: flex
+      justify-content: center
+
+      a
+        margin-right: 11px
+
+h2
+  position: relative
+  text-align: center
+  font-style: normal
+  font-weight: 500
+  font-size: 40px
+  line-height: 47px
+  color: #383838
+
+  &:hover::after
+    position: absolute
+    margin-top: 20px
+    display: block
+    content: ""
+    left: 42.5%
+    border: 0
+    width: 15%
+    height: 4px
+    background: #F5BD41
+
+.offer, .footer, .hotels, .destinations
+  padding: 121px 0
+
+.offer_main
+  margin-top: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .offer_item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+    .offer_item_text
+      margin-top: 48px
+      font-size: 24px
+      line-height: 28px
+      color: #383838
+      text-align: center
+
+.hotels_main, .destinations_main
+  margin: 108px -4px 0
+  display: flex
+  position: relative
+  justify-content: space-between
+
+.hotel_item_name, .destinations_item_name
+  margin-top: 21px
+  font-style: normal
+  font-weight: normal
+  font-size: 24px
+  color: #3077C6
+
+.hotels
+  background: #EAF0F9
+
+  .hotels_item
+    margin: 0 8px
+
+    .hotels_item_img
+      img
+        width: 100%
+
+    .hotel_item_place
+      margin-top: 24px
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      color: #BFBFBF
+
+  .rnd_btn_hotel
+    position: absolute
+    background: none
+    border: none
+    right: 0
+    top: 30%
+    transform: translateX(30%)
+
+.btn-group
+  display: inline-block
+  margin-top: 108px
+  background-color: #eaf0f9
+  border-radius: 10px
+
+  button
+    color: #000000
+    cursor: pointer
+    border: none
+    padding: 17px 52px
+    border-radius: 10px
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    text-align: center
+
+    &:nth-child(2)
+      padding: 17px 60px
+
+    &:nth-child(3)
+      padding: 17px 30px
+
+    &:nth-child(4)
+      display: none
+
+    &:hover
+      background-color: #0018ea
+      color: #ffffff
+
+
+.destinations_main
+  margin-top: 66px
+
+  .item_dest
+    margin: 0 8px
+    .dest_wrapper
+      position: relative
+      img
+        max-width: 100%
+      button
+        opacity: 0.1
+        position: absolute
+        top: 42%
+        left: 29%
+        padding: 13px 24px
+        font-size: 18px
+        color: #3077C6
+        border: 1px solid #3077C6
+        border-radius: 8px
+    .dest_wrapper:hover
+      button
+        opacity: 1
+
+.rnd_btn_dest
+  margin-top: 48px
+  background: none
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  border: none
+.rnd_btn_right
+  display: none
+  position: absolute
+  background: none
+  border: none
+  right: 0
+  top: 35%
+  transform: translateX(40%)
+
+.sign_up
+  order: 3
+
+  .btm-section
+    position: relative
+    margin: 92px 12px 0
+    width: 100%
+    padding: 24px
+    display: flex
+    justify-content: left
+    align-items: center
+    background-color: #eaf0f9
+
+    .sign_up_logo
+      display: none
+
+    .img_round
+      margin: 33px 0
+      display: flex
+      width: 86px
+      height: 86px
+      border-radius: 50%
+
+    .btm_block
+      padding: 0 24px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      .btm_text
+        font-weight: 500
+        font-size: 24px
+        color: #383838
+
+      .btm_btn
+        margin-top: 20px
+        height: 48px
+        width: 128px
+        border-radius: 10px
+        background: #ffffff
+        color: #3077C6
+        border: 1px solid #3077C6
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 21px
+        text-align: center
+    .install_link
+      display: none
+      margin-left: 16px
+
+      a
+        font-weight: 700
+        font-size: 24px
+        color: #3077C6
+        text-decoration: none
+    .btn_close
+      position: absolute
+      top: 24px
+      right: 24px
+      border: none
+
+.reviews
+  padding: 120px 12px
+
+  .main_reviews_block
+    margin-top: 112px
+    display: flex
+    justify-content: space-between
+
+    .reviews_block
+      margin: 0 8px
+      min-height: 760px
+      background: #EAF0F9
+
+      .reviews_image_block
+        position: relative
+        img
+          width: 100%
+          height: 100%
+
+        p
+          width: 100%
+          padding: 12px 24px
+          position: absolute
+          bottom: 0
+          font-style: normal
+          font-weight: normal
+          font-size: 18px
+          line-height: 21px
+          color: #FFFFFF
+          background: rgba(56, 56, 56, 0.7)
+
+  .reviews_content
+    padding: 24px
+
+    .reviews_hotel
+      display: flex
+      justify-content: space-between
+      align-self: center
+      margin-bottom: 8px
+
+      p
+        font-weight: 500
+        font-size: 18px
+        color: #3077C6
+
+      div
+        padding: 4px 11px
+        background: #10367C
+        border-radius: 8px
+        color: #FFFFFF
+
+    .reviews_place
+      display: flex
+      justify-content: space-between
+      align-self: center
+
+      .country
+        font-size: 18px
+        color: #3077C6
+
+      .place_reviews
+        font-size: 14px
+        color: #BFBFBF
+
+    .reviews_account
+      margin-top: 26px
+      display: flex
+
+      .account_user
+        margin-left: 21px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+      .reviews_user
+        font-size: 18px
+        color: #383838
+
+      .reviews_country
+        font-size: 18px
+        color: #BFBFBF
+
+    .reviews_text
+        margin-top: 22px
+        font-size: 18px
+        line-height: 21px
+        color: #383838
+
+.footer
+  background: #10367C
+  padding-bottom: 80px
+
+  .footer_logo
+    display: none
+
+  .main_foot_block
+    display: flex
+    justify-content: space-between
+
+    .footer_text_block
+      padding: 0 12px
+      &:last-child
+        padding: 0
+
+      li
+        list-style: none
+        margin-bottom: 25px
+
+        a
+          text-decoration: none
+          color: #FFFFFF
+          font-weight: 500
+          font-size: 20px
+          line-height: 23px
+
+        div
+          margin: 24px 0
+          line-height: 24px
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          text-align: left
+          color: #FFFFFF
+
+  .sign
+    margin: 40px 10px
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    text-align: left
+    color: #FFFFFF
+
+@media screen
+  .col-md-1
+    width: calc(100% / 12 * 1)
+
+  .col-md-2
+    width: calc(100% / 12 * 2)
+
+  .col-md-3
+    width: calc(100% / 12 * 3)
+
+  .col-md-4
+    width: calc(100% / 12 * 4)
+
+  .col-md-5
+    width: calc(100% / 12 * 5)
+
+  .col-md-6
+    width: calc(100% / 12 * 6)
+
+  .col-md-7
+    width: calc(100% / 12 * 7)
+
+  .col-md-8
+    width: calc(100% / 12 * 8)
+
+  .col-md-9
+    width: calc(100% / 12 * 9)
+
+  .col-md-10
+    width: calc(100% / 12 * 10)
+
+  .col-md-11
+    width: calc(100% / 12 * 11)
+
+  .col-md-12
+    width: calc(100% / 12 * 12)
+
+@media screen and (max-width: 920px)
+  .col-sm-1
+    width: calc(100% / 12 * 1)
+
+  .col-sm-2
+    width: calc(100% / 12 * 2)
+
+  .col-sm-3
+    width: calc(100% / 12 * 3)
+
+  .col-sm-4
+    width: calc(100% / 12 * 4)
+
+  .col-sm-5
+    width: calc(100% / 12 * 5)
+
+  .col-sm-6
+    width: calc(100% / 12 * 6)
+
+  .col-sm-7
+    width: calc(100% / 12 * 7)
+
+  .col-sm-8
+    width: calc(100% / 12 * 8)
+
+  .col-sm-9
+    width: calc(100% / 12 * 9)
+
+  .col-sm-10
+    width: calc(100% / 12 * 10)
+
+  .col-sm-11
+    width: calc(100% / 12 * 11)
+
+  .col-sm-12
+    width: calc(100% / 12 * 12)
+
+  main
+    display: flex
+    flex-direction: column
+
+  .container
+    font-size: 15px
+    padding: 0 16px
+
+  .header
+        .dark
+          padding-top: 20px
+          padding-bottom: 40px
+
+          h1
+            margin-top: 100px
+            font-size: 40px
+
+          .header_form
+            flex-wrap: wrap
+            background-color: #F5BD41
+            padding: 8px
+
+            div
+              padding: 8px
+
+          .header_link_block
+            display: none
+
+          .hamburger-menu
+            display: block
+
+          .menu__btn
+            display: flex
+
+          .header_store_links
+            margin-top: 40px
+
+          .check_in
+            margin-right: 3px
+          .check_out
+            margin-left:  3px
+
+          .header_form_destination input:focus + label, .header_form_people input:focus + label, .check_in:focus + label, .check_out:focus + label
+            transform: translateY(-12px)
+            font-size: 12px
+            padding: 0
+            color: black
+
+  h2
+    font-size: 28px
+    font-style: normal
+    font-weight: 700
+
+  .offer, .destinations, .hotels
+    padding: 40px 0
+
+  .offer_main
+    margin-top: 40px
+    flex-wrap: wrap
+    align-items: center
+
+    .offer_item
+      margin-top: 32px
+
+      .offer_item_text
+        margin-top: 16px
+
+  .btn-group
+    background: none
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+
+    button
+      font-size: 20px
+      padding: 12px 35px
+
+  .destinations_main
+    margin-top: 40px
+
+  .hotels_item:nth-child(4)
+    display: none
+
+  .hotel_item_place,.hotel_item_name, .destinations_item_name
+    font-size: 18px
+
+  .item_dest:nth-child(4)
+    display: none
+
+  .rnd_btn_right
+    display: block
+
+  .reviews
+    margin-top: 120px
+    padding-bottom: 0
+    background: #EAF0F9
+
+    .reviews_block:last-child
+      display: none
+
+  .sign_up
+    order: 3
+
+    .btm-section
+      margin: 0
+      background: #FFFFFF
+      justify-content: space-between
+
+      .install_link
+        display: flex
+
+      .img_round
+        display: none
+
+      .sign_up_logo
+        height: 58px
+        display: flex
+        background: #3077C6
+        border-radius: 4px
+        padding: 0 2px
+        margin-right: 16px
+
+      .btm_btn
+        display: none
+
+      .btn_close
+        margin: 0 18px
+        position: static
+        order: -1
+        background: #FFFFFF
+
+  .footer
+    padding: 40px 0
+
+    .footer_logo
+      display: block
+      margin: 0 auto
+      height: 40px
+      width: 205px
+
+    .main_foot_block
+      margin-top: 40px
+      text-align: center
+
+      .footer_text_block
+        li:not(:first-child)
+          display: none
+
+    .sign
+      text-align: center
+      margin: 40px auto
+
+@media screen and (max-width: 520px)
+  .col-xs-1
+    width: calc(100% / 12 * 1)
+
+  .col-xs-2
+    width: calc(100% / 12 * 2)
+
+  .col-xs-3
+    width: calc(100% / 12 * 3)
+
+  .col-xs-4
+    width: calc(100% / 12 * 4)
+
+  .col-xs-5
+    width: calc(100% / 12 * 5)
+
+  .col-xs-6
+    width: calc(100% / 12 * 6)
+
+  .col-xs-7
+    width: calc(100% / 12 * 7)
+
+  .col-xs-8
+    width: calc(100% / 12 * 8)
+
+  .col-xs-9
+    width: calc(100% / 12 * 9)
+
+  .col-xs-10
+    width: calc(100% / 12 * 10)
+
+  .col-xs-11
+    width: calc(100% / 12 * 11)
+
+  .col-xs-12
+    width: calc(100% / 12 * 12)
+
+  .header
+    min-height: 533px
+    height: 100%
+
+    .dark
+      padding-top: 4px
+      padding-bottom: 40px
+
+      .header_logo
+        width: 121px
+
+      .header_nav_img
+        a
+         padding-left: 16px
+        .night_theme
+          width: 16px
+          height: 16px
+        .account_circle
+          width: 24px
+          height: 24px
+
+      .hamburger-menu
+        padding-left: 16px
+
+      h1
+       margin-top: 38px
+       font-size: 30px
+       line-height: 36px
+
+      .header_form
+        margin-top: 30px
+        padding: 4px
+        flex-wrap: wrap
+        background-color: #F5BD41
+        border-radius: 0
+
+        div
+          padding: 4px
+        .header_form_destination
+          .loupe
+            display: inline
+            position: absolute
+            top: 40%
+            left: 24px
+
+        input
+            font-size: 15px
+            padding: 15px 40px
+            border-radius: 4px
+        label
+            font-size: 15px
+            left: 50px
+        button
+          font-size: 19px
+          padding: 15px 40px
+          border-radius: 4px
+
+      .header_store_links
+          margin-top: 32px
+
+  .offer
+    padding: 18px 0
+
+    h2
+      font-size: 28px
+      font-style: normal
+      font-weight: 700
+
+    .container
+      font-size: 15px
+      padding: 0 16px
+
+    .offer_main
+      margin-top: 0
+      margin-bottom: 20px
+      flex-direction: column
+      align-items: center
+
+      .offer_item
+        margin-top: 24px
+        .offer_item_img
+          display: flex
+          justify-content: center
+        .offer_icon
+          width: 70%
+
+        .offer_item_text
+          margin-top: 13px
+          font-size: 15px
+  .hotels
+    padding-top: 32px
+
+    .hotels_main
+      margin-top: 25px
+
+      .hotel_item_name
+        margin-top: 6px
+        font-size: 12px
+
+      .hotel_item_place
+        margin-top: 2px
+        font-size: 12px
+
+    .hotels_item:nth-child(3)
+      display: none
+
+  .destinations
+    padding-top: 34px
+    .btn-group
+      margin-top: 23px
+
+      button
+        font-size: 19px
+        padding: 5px 15px
+
+        &:nth-child(3)
+          display: none
+        &:nth-child(4)
+          display: block
+
+    .destinations_main
+      margin-top: 26px
+      .destinations_item_name
+        margin-top: 7px
+        font-size: 12px
+
+    .rnd_btn_dest
+      display: none
+
+  .item_dest:nth-child(3), .reviews_block:nth-child(2)
+   display: none
+
+  .reviews
+    margin-top: 0
+    padding: 30px 0
+
+    .main_reviews_block
+      margin-top: 30px
+
+      .reviews_block
+        margin: 0
+        min-height: 600px
+        .reviews_image_block
+          p
+            display: none
+        .reviews_content
+          padding: 0
+          .reviews_account
+            margin-top: 0
+          p,.reviews_text
+            font-size: 15px
+          .reviews_text
+            margin-top: 19px
+            line-height: 18px
+
+  .sign_up
+    padding: 24px 16px
+    .btm-section
+      padding: 0
+      .btn_close
+        margin: 0
+        svg
+          width: 16px
+      .sign_up_logo
+        margin: 0 16px
+        width: 58px
+      .install_link
+        a
+          font-size: 14px
+      .btm_block
+        padding: 0
+        .btm_text
+          font-size: 12px
+          line-height: 14px
+
+
+  .footer
+    padding: 40px 0
+
+    .footer_logo
+      display: block
+      margin: 0 auto
+      height: 19px
+      width: 205px
+
+    .main_foot_block
+      margin-top: 40px
+      text-align: center
+
+      .footer_text_block
+        padding: 0
+        li
+          a
+            font-size: 15px
+            line-height: 14px
+
+        li:not(:first-child)
+          display: none
+
+
+    .sign
+        font-size: 12px
+        text-align: center
+        margin: 6px auto
