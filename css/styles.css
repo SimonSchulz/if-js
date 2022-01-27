@@ -309,6 +309,7 @@ h2:hover::after {
 .hotels_main, .destinations_main {
   margin: 108px -4px 0;
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
 }
@@ -325,10 +326,10 @@ h2:hover::after {
   background: #EAF0F9;
 }
 .hotels .hotels_item {
-  margin: 0 8px;
+  margin: 8px 0;
 }
 .hotels .hotels_item .hotels_item_img img {
-  width: 100%;
+  max-width: 100%;
 }
 .hotels .hotels_item .hotel_item_place {
   margin-top: 24px;
@@ -381,7 +382,7 @@ h2:hover::after {
   margin-top: 66px;
 }
 .destinations_main .item_dest {
-  margin: 0 8px;
+  margin: 8px 0;
 }
 .destinations_main .item_dest .dest_wrapper {
   position: relative;
