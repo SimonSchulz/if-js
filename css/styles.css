@@ -325,8 +325,12 @@ h2:hover::after {
 .hotels {
   background: #EAF0F9;
 }
+.hotels .container {
+  position: relative;
+}
 .hotels .hotels_item {
   margin: 8px 0;
+  height: 432px;
 }
 .hotels .hotels_item .hotels_item_img img {
   max-width: 100%;
@@ -337,14 +341,26 @@ h2:hover::after {
   font-weight: normal;
   font-size: 24px;
   color: #BFBFBF;
+  max-width: 295px;
 }
-.hotels .rnd_btn_hotel {
+.hotels .right_btn_hotel {
   position: absolute;
   background: none;
   border: none;
   right: 0;
-  top: 30%;
-  transform: translateX(30%);
+  top: 50%;
+  transform: translateX(55%);
+}
+.hotels .left_btn_hotel {
+  position: absolute;
+  background: none;
+  border: none;
+  left: 0;
+  top: 50%;
+  transform: translateX(-55%);
+}
+.hotels .left_btn_hotel img {
+  transform: rotate(180deg);
 }
 
 .btn-group {
@@ -810,10 +826,6 @@ h2:hover::after {
 
   .destinations_main {
     margin-top: 40px;
-  }
-
-  .hotels_item:nth-child(4) {
-    display: none;
   }
 
   .hotel_item_place, .hotel_item_name, .destinations_item_name {

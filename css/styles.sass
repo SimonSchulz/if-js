@@ -321,8 +321,12 @@ h2
 .hotels
   background: #EAF0F9
 
+  .container
+    position: relative
+
   .hotels_item
     margin: 8px 0
+    height: 432px
 
     .hotels_item_img
       img
@@ -334,14 +338,26 @@ h2
       font-weight: normal
       font-size: 24px
       color: #BFBFBF
+      max-width: 295px
 
-  .rnd_btn_hotel
+  .right_btn_hotel
     position: absolute
     background: none
     border: none
     right: 0
-    top: 30%
-    transform: translateX(30%)
+    top: 50%
+    transform: translateX(55%)
+
+  .left_btn_hotel
+    position: absolute
+    background: none
+    border: none
+    left: 0
+    top: 50%
+    transform: translateX(-55%)
+
+    img
+      transform: rotate(180deg)
 
 .btn-group
   display: inline-block
@@ -761,9 +777,6 @@ h2
 
   .destinations_main
     margin-top: 40px
-
-  .hotels_item:nth-child(4)
-    display: none
 
   .hotel_item_place,.hotel_item_name, .destinations_item_name
     font-size: 18px
