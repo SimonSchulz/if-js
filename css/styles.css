@@ -333,7 +333,8 @@ h2:hover::after {
   height: 432px;
 }
 .hotels .hotels_item .hotels_item_img img {
-  max-width: 100%;
+  width: 296px;
+  height: 296px;
 }
 .hotels .hotels_item .hotel_item_place {
   margin-top: 24px;
