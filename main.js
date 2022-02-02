@@ -48,7 +48,11 @@ const data = [
         imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
     },
 ];
-let data2 =[data[0],data[1],data[2],data[3]];
+let carouselItems=4;
+const data2 =[];
+for (let i = 0;i<carouselItems;i++){
+    data2.push(data[i]);
+}
 const homesGuestLoves = document.querySelector('.hotels_main');
 function drawHotelItems(){
     return data2.map(i =>
@@ -76,7 +80,7 @@ btn_prev.onclick = function(){
     }
 }
 btn_next.onclick = function(){
-    i+4 > data.length-1 ? newItem= i+4-data.length : newItem = i+4;
+    i+carouselItems > data.length-1 ? newItem= i+carouselItems-data.length : newItem = i+carouselItems;
     data2.shift();
     data2.push(data[newItem]);
     homesGuestLoves.innerHTML = drawHotelItems();
