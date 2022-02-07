@@ -167,7 +167,7 @@
       display: flex
       background: #ffffff
       border-radius: 8px
-      font-size: 21px
+      font-size: 18px
 
     .loupe
       display: none
@@ -189,6 +189,8 @@
       height: 100%
       border: none
       border-radius: 8px
+      &:focus
+       outline-color: #F5BD41
 
     .header_form_check
       position: relative
@@ -199,9 +201,10 @@
       height: 100%
       width: 50%
       border: none
-      font-size: 18px
       padding: 21px 22px
       border-radius: 8px
+      &:focus
+        outline-color: #F5BD41
 
     .header_form_check
       label
@@ -215,35 +218,101 @@
           top: 33%
           left: 55%
 
+    .third__inputActive
+      border: 3px solid #F5BD41
     .header_form_people
-      position: relative
+      display: flex
+      height: 100%
+      justify-content: center
+      align-self: center
+      background: #FFFFFF
+      border-radius: 8px
+      .input
+        padding: 18px 0
 
-      input
-        width: 100%
-        height: 100%
-        border: none
-        font-size: 18px
-        padding: 21px 22px
-        border-radius: 8px
+    .positionModalMenu
+        .modalMenu
+          padding: 0
+          width: 259px
+          max-height: 256px
+          background: #FFFFFF
+          position: absolute
+          left: -259px
+          top: 70px
+          border-radius: 8px
+          font-size: 16px
+          overflow-y: scroll
+          visibility: hidden
+        .open
+          visibility: visible
+          z-index: 1
 
-      label
-        position: absolute
-        left: 24px
-        top: 33%
+        .counterContainer
+          display: flex
+          justify-content: space-between
 
-      input:focus + label
-        transform: translateY(-60px)
-        font-size: 21px
-        padding: 0
-        color: #ffffff
+          .namesNumberChanger, .counters
+            margin: 15px
+            display: flex
+            justify-content: space-around
+            flex-direction: column
 
+          .counter
+              display: flex
+              justify-content: space-between
+              text-align: center
+
+              .numberChanger
+                display: flex
+                align-items: center
+                justify-content: space-between
+                &:first-child
+                  margin: 10px
+
+              .btnCounterMin, .btnCounterPlus
+                  padding: 5px 7px
+                  height: 30px
+                  width: 30px
+                  border: 1px solid #CECECE
+                  background: #FFF
+                  color: #CECECE
+                  font-size: 18px
+
+              .btnActive
+                border: 1px solid #3077C6
+                color: #3077C6
+
+              .thirdInputs
+                margin: 0 15px
+                text-align: center
+                background: #FFF
+                border: none
+                height: 30px
+                width: 30px
+
+        .addAgeChildren
+          margin: 15px
+          display: none
+          font-size: 14px
+
+        .selectors
+          padding: 0 15px
+          select
+            margin: 7px
+            width: 90px
+            height: 30px
+            border: 1px solid #3077C6
+            cursor: pointer
+            overflow: hidden
+            font-size: 12px
 
     .header_form_destination input:focus + label, .check_in:focus + label, .check_out:focus + label
       transform: translateY(-60px)
       font-size: 21px
       padding: 0
       color: #ffffff
-
+    .header_form_btn
+      position: relative
     .form_btn
       width: 100%
       height: 100%
@@ -309,7 +378,7 @@ h2
   display: flex
   flex-wrap: wrap
   position: relative
-  justify-content: space-between
+  justify-content: space-around
 
 .hotel_item_name, .destinations_item_name
   margin-top: 21px
@@ -662,7 +731,7 @@ h2
   .col-md-12
     width: calc(100% / 12 * 12)
 
-@media screen and (max-width: 920px)
+@media screen and (max-width: 970px)
   .col-sm-1
     width: calc(100% / 12 * 1)
 
@@ -724,6 +793,9 @@ h2
             div
               padding: 8px
 
+            .header_form_people
+              margin: 0 8px
+
           .header_link_block
             display: none
 
@@ -740,12 +812,23 @@ h2
             margin-right: 3px
           .check_out
             margin-left:  3px
+          .header_form_btn
+            .positionModalMenu
+              padding: 0
+              .modalMenu
+                top: 10px
+                left: 10px
+                div
+                  padding: 0
+                .selectors
+                  padding: 0 15px
 
           .header_form_destination input:focus + label, .header_form_people input:focus + label, .check_in:focus + label, .check_out:focus + label
             transform: translateY(-12px)
             font-size: 12px
             padding: 0
             color: black
+
 
   h2
     font-size: 28px
@@ -941,6 +1024,27 @@ h2
           font-size: 19px
           padding: 15px 40px
           border-radius: 4px
+
+        .header_form_people
+          margin: 0 4px
+          .input
+            padding: 10px 0
+            font-size: 15px
+
+
+      .header_form_btn
+          .positionModalMenu
+            padding: 0
+            .modalMenu
+              top: 10px
+              left: 10px
+              div
+                padding: 0
+              input
+                padding: 0
+              .selectors
+                padding: 0 15px
+
 
       .header_store_links
           margin-top: 32px
