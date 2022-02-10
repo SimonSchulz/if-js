@@ -275,19 +275,68 @@
                     <label for="check_out">check-out</label>
                 </div>
                 <div class="header_form_people col-md-3 col-sm-12 col-xs-12">
-                    <input type="text" name="people" id="people">
-                    <label for="people">Adults - children - room</label>
+                    <div class="input">
+                        <span class="counterNumber" id="adultsCounter"></span>
+                        Adults
+                        <span class="third__inputHyphen">—</span>
+                    </div>
+                    <div class="input">
+                        <span class="counterNumber" id="childrenCounter"></span>
+                        Children
+                        <span class="third__inputHyphen">—</span>
+                    </div>
+                    <div class="input">
+                        <span class="counterNumber" id="roomsCounter"></span>
+                        Room
+                    </div>
                 </div>
                 <div class="header_form_btn col-md-2 col-sm-12 col-xs-12">
+                    <div class="positionModalMenu">
+                        <div class="modalMenu" id="modalMenu">
+                            <div class="counterContainer">
+                                <div class="namesNumberChanger">
+                                    <label for="adultsInput">Adults</label>
+                                    <label for="childrenInput">Children</label>
+                                    <label for="roomsInput">Rooms</label>
+                                </div>
+                                <div class="counters">
+                                    <div class="counter">
+                                        <div class="numberChanger">
+                                            <button type="button" class="btnCounterMin">-</button>
+                                            <input class="thirdInputs" id="adultsInput" type="number" disabled
+                                                   name="adults"/>
+                                            <button type="button" class="btnCounterPlus btnActive">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="counter">
+                                        <div class="numberChanger">
+                                            <button type="button" class="btnCounterMin ">-</button>
+                                            <input class="thirdInputs" id="childrenInput" type="number" disabled
+                                                   name="children"/>
+                                            <button type="button" class="btnCounterPlus btnActive">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="counter">
+                                        <div class="numberChanger">
+                                            <button type="button" class="btnCounterMin ">-</button>
+                                            <input class="thirdInputs" id="roomsInput" type="number" disabled
+                                                   name="rooms"/>
+                                            <button type="button" class="btnCounterPlus btnActive">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addAgeChildren" id="childrenSelectorsTitle">
+                                What is the age of the child you’re <br> travelling with?
+                            </div>
+                            <div class="selectors" id="childrenSelectors"></div>
+                        </div>
+                    </div>
                     <button class="form_btn">Search</button>
                 </div>
-
             </form>
             <div class="header_store_links">
                 <a href="#">
-                    <!--              <svg width="143" height="48">-->
-                    <!--                  <use href="#google"></use>-->
-                    <!--              </svg>-->
                     <img src="./images/google-play-badge.png" alt="google_play">
                 </a>
                 <a href="#">
