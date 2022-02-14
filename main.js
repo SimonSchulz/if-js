@@ -7,6 +7,7 @@ if(window.innerWidth>1200){
 } else {
     carouselItemsCount=2
 }
+// bubble sort
 function bubbleSort(arr, key) {
     for (let i =0; i<arr.length-1;i++){
         let swapped = false;
@@ -108,11 +109,6 @@ const inputsValidation = {
         counterElementId: "childrenCounter",
         additionalChanges: input => {
             const { value } = input;
-            if (value > 0) {
-                document.getElementById("childrenSelectorsTitle").style.display = "block";
-            } else {
-                document.getElementById("childrenSelectorsTitle").style.display = "none";
-            }
             if ({ value })
                 childrenSelectors.innerHTML = "";
             for (let i = 0; i < value; i++) {
