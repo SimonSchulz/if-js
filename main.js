@@ -7,8 +7,22 @@ if(window.innerWidth>1200){
 } else {
     carouselItemsCount=2
 }
-
-const data =[];
+function bubbleSort(arr, key) {
+    for (let i =0; i<arr.length-1;i++){
+        let swapped = false;
+        for (let j = 0; j < arr.length - 1-i; j++) {
+            if (arr[j][key] > arr[j + 1][key]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+        if (!swapped){return arr;}
+    }
+    return arr;
+}
+let data =[];
 const carousel =[];
 const list = document.querySelector('.hotels_main');
 function drawHotelItems(content){
@@ -21,20 +35,34 @@ function drawHotelItems(content){
 </div>`);
 }
 
+//lesson-13
+const url = 'https://fe-student-api.herokuapp.com/api/hotels/popular';
 const getResponse = async () => {
     try {
-        const response = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular');
+        const storageData = sessionStorage.getItem(url);
+        if (storageData){
+            data = JSON.parse(storageData);
+            data = bubbleSort(data,"name");
+            for (let i = 0; i<carouselItemsCount;i++){
+                carousel.push(data[i]);
+            }
+            list.innerHTML = drawHotelItems(carousel);
+        }
+        else {
+        const response = await fetch(url);
         const content = await response.json();
+        sessionStorage.setItem(url,JSON.stringify(content))
         for (let i = 0; i<content.length;i++){
             data.push(content[i]);
-            if(i<carouselItemsCount){
-                carousel.push(content[i]);
-            }
+        }
+        data = bubbleSort(data, "name");
+        for (let i = 0; i<carouselItemsCount;i++){
+                carousel.push(data[i]);
         }
         list.innerHTML = drawHotelItems(carousel);
+        }
     } catch (e) {
         console.error(e);
-    } finally {
     }
 }
 getResponse();
