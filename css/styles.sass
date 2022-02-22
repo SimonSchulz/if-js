@@ -9,6 +9,11 @@
   max-width: 1224px
   margin: 0 auto
   font-family: Roboto, sans-serif
+.none
+  display: none
+
+.block
+  display: block
 
 .header
   position: relative
@@ -331,6 +336,33 @@
       a
         margin-right: 11px
 
+.available_hotels
+  padding: 40px 0
+  background: #EAF0F9
+  .available_wrapper
+    margin: 108px -4px 0
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    justify-content: space-between
+    .available_img
+      img
+        width: 296px
+        height: 296px
+    .available_name
+      margin-top: 21px
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      color: #3077C6
+    .available_place
+      margin-top: 24px
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      color: #BFBFBF
+      max-width: 295px
+
 h2
   position: relative
   text-align: center
@@ -354,7 +386,7 @@ h2
 .offer, .footer, .hotels, .destinations
   padding: 121px 0
 
-.offer_main
+.offer_main, .available_wrapper
   margin-top: 100px
   display: flex
   justify-content: space-between

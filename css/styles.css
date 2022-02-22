@@ -11,6 +11,14 @@
   font-family: Roboto, sans-serif;
 }
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .header {
   position: relative;
   background-image: url("../images/castel.png");
@@ -339,6 +347,37 @@
   margin-right: 11px;
 }
 
+.available_hotels {
+  padding: 40px 0;
+  background: #EAF0F9;
+}
+.available_hotels .available_wrapper {
+  margin: 108px -4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+.available_hotels .available_wrapper .available_img img {
+  width: 296px;
+  height: 296px;
+}
+.available_hotels .available_wrapper .available_name {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #3077C6;
+}
+.available_hotels .available_wrapper .available_place {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #BFBFBF;
+  max-width: 295px;
+}
+
 h2 {
   position: relative;
   text-align: center;
@@ -364,19 +403,19 @@ h2:hover::after {
   padding: 121px 0;
 }
 
-.offer_main {
+.offer_main, .available_wrapper {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.offer_main .offer_item {
+.offer_main .offer_item, .available_wrapper .offer_item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.offer_main .offer_item .offer_item_text {
+.offer_main .offer_item .offer_item_text, .available_wrapper .offer_item .offer_item_text {
   margin-top: 48px;
   font-size: 24px;
   line-height: 28px;
