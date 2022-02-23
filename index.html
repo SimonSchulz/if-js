@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TripHouse</title>
+    <link rel="stylesheet" href="css/air-datepicker.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -268,11 +269,10 @@
                            id="form_destinations">
                     <label for="form_destinations">Your destination or hotel name</label>
                 </div>
-                <div class="header_form_check col-md-3 col-sm-12 col-xs-12">
-                    <input type="text" class="check_in" name="check_in" id="check_in">
-                    <label for="check_in">check-in</label>
-                    <input type="text" class="check_out" name="check_out" id="check_out">
-                    <label for="check_out">check-out</label>
+                <div class="containerCalendar col-md-3 col-sm-12 col-xs-12">
+                    <input class="myDiv1" id="el1" placeholder="Check-in">
+                    <span class="tere">—</span>
+                    <input class="myDiv2" id="el2" placeholder="Check-out">
                 </div>
                 <div class="header_form_people col-md-3 col-sm-12 col-xs-12">
                     <div class="input">
@@ -637,6 +637,8 @@
         <div class="sign container">© 2020 Triphouse, Inc. All rights reserved</div>
     </div>
 </section>
-<script src="main.js"></script>
+<script src="./main.js"></script>
+<script src="air-datepicker.js"></script>
+<script src="calender.js"></script>
 </body>
 </html>

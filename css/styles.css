@@ -202,30 +202,26 @@
 .header .dark .form_destinations:focus {
   outline-color: #F5BD41;
 }
-.header .dark .header_form_check {
-  position: relative;
+.header .dark .containerCalendar {
   display: flex;
-  border: none;
-}
-.header .dark .check_in, .header .dark .check_out {
-  height: 100%;
-  width: 50%;
-  border: none;
-  padding: 21px 22px;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
 }
-.header .dark .check_in:focus, .header .dark .check_out:focus {
-  outline-color: #F5BD41;
+.header .dark .containerCalendar:focus, .header .dark .activeCalendar {
+  border: 1px solid #F5BD41;
 }
-.header .dark .header_form_check label:first-of-type {
-  position: absolute;
-  left: 5%;
-  top: 33%;
+.header .dark .myDiv1, .header .dark .myDiv2 {
+  width: 50%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
 }
-.header .dark .header_form_check label:nth-of-type(2) {
-  position: absolute;
-  top: 33%;
-  left: 55%;
+.header .dark .myDiv1:focus, .header .dark .myDiv2:focus {
+  outline: none;
 }
 .header .dark .third__inputActive {
   border: 3px solid #F5BD41;
@@ -319,7 +315,7 @@
   overflow: hidden;
   font-size: 12px;
 }
-.header .dark .header_form_destination input:focus + label, .header .dark .check_in:focus + label, .header .dark .check_out:focus + label {
+.header .dark .header_form_destination input:focus + label {
   transform: translateY(-60px);
   font-size: 21px;
   padding: 0;
@@ -899,12 +895,6 @@ h2:hover::after {
   .header .dark .header_store_links {
     margin-top: 40px;
   }
-  .header .dark .check_in {
-    margin-right: 3px;
-  }
-  .header .dark .check_out {
-    margin-left: 3px;
-  }
   .header .dark .header_form_btn .positionModalMenu {
     padding: 0;
   }
@@ -918,7 +908,7 @@ h2:hover::after {
   .header .dark .header_form_btn .positionModalMenu .modalMenu .selectors {
     padding: 0 15px;
   }
-  .header .dark .header_form_destination input:focus + label, .header .dark .header_form_people input:focus + label, .header .dark .check_in:focus + label, .header .dark .check_out:focus + label {
+  .header .dark .header_form_destination input:focus + label, .header .dark .header_form_people input:focus + label {
     transform: translateY(-12px);
     font-size: 12px;
     padding: 0;

@@ -240,6 +240,3 @@ searchFormBtn.addEventListener('click', submitForm);
 
 
 
-
-
-
