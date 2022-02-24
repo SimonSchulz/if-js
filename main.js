@@ -238,5 +238,14 @@ const submitForm = (event) => {
 }
 searchFormBtn.addEventListener('click', submitForm);
 
+//input your destination
+const input = document.querySelector('.form_destinations');
 
+input.addEventListener('input', () => {
+    if (input.value !== '') {
+        input.classList.add('input_filled');
+    } else {
+        input.classList.remove('input_filled');
+    }
+});
 

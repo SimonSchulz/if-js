@@ -315,7 +315,7 @@
   overflow: hidden;
   font-size: 12px;
 }
-.header .dark .header_form_destination input:focus + label {
+.header .dark .header_form_destination input:focus ~ label, .header .dark .input_filled ~ label {
   transform: translateY(-60px);
   font-size: 21px;
   padding: 0;
