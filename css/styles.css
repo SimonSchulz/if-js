@@ -11,6 +11,14 @@
   font-family: Roboto, sans-serif;
 }
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .header {
   position: relative;
   background-image: url("../images/castel.png");
@@ -194,30 +202,26 @@
 .header .dark .form_destinations:focus {
   outline-color: #F5BD41;
 }
-.header .dark .header_form_check {
-  position: relative;
+.header .dark .containerCalendar {
   display: flex;
-  border: none;
-}
-.header .dark .check_in, .header .dark .check_out {
-  height: 100%;
-  width: 50%;
-  border: none;
-  padding: 21px 22px;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
 }
-.header .dark .check_in:focus, .header .dark .check_out:focus {
-  outline-color: #F5BD41;
+.header .dark .containerCalendar:focus, .header .dark .activeCalendar {
+  border: 1px solid #F5BD41;
 }
-.header .dark .header_form_check label:first-of-type {
-  position: absolute;
-  left: 5%;
-  top: 33%;
+.header .dark .myDiv1, .header .dark .myDiv2 {
+  width: 50%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
 }
-.header .dark .header_form_check label:nth-of-type(2) {
-  position: absolute;
-  top: 33%;
-  left: 55%;
+.header .dark .myDiv1:focus, .header .dark .myDiv2:focus {
+  outline: none;
 }
 .header .dark .third__inputActive {
   border: 3px solid #F5BD41;
@@ -311,7 +315,7 @@
   overflow: hidden;
   font-size: 12px;
 }
-.header .dark .header_form_destination input:focus + label, .header .dark .check_in:focus + label, .header .dark .check_out:focus + label {
+.header .dark .header_form_destination input:focus ~ label, .header .dark .input_filled ~ label {
   transform: translateY(-60px);
   font-size: 21px;
   padding: 0;
@@ -339,6 +343,39 @@
   margin-right: 11px;
 }
 
+.available_hotels {
+  padding: 40px 0;
+  background: #EAF0F9;
+}
+.available_hotels .available_wrapper {
+  margin: 108px -4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+  align-items: start;
+}
+.available_hotels .available_wrapper .available_img img {
+  width: 296px;
+  height: 296px;
+}
+.available_hotels .available_wrapper .available_name {
+  margin-top: 21px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #3077C6;
+}
+.available_hotels .available_wrapper .available_place {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #BFBFBF;
+  max-width: 295px;
+  margin-bottom: 20px;
+}
+
 h2 {
   position: relative;
   text-align: center;
@@ -364,19 +401,19 @@ h2:hover::after {
   padding: 121px 0;
 }
 
-.offer_main {
+.offer_main, .available_wrapper {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.offer_main .offer_item {
+.offer_main .offer_item, .available_wrapper .offer_item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.offer_main .offer_item .offer_item_text {
+.offer_main .offer_item .offer_item_text, .available_wrapper .offer_item .offer_item_text {
   margin-top: 48px;
   font-size: 24px;
   line-height: 28px;
@@ -860,12 +897,6 @@ h2:hover::after {
   .header .dark .header_store_links {
     margin-top: 40px;
   }
-  .header .dark .check_in {
-    margin-right: 3px;
-  }
-  .header .dark .check_out {
-    margin-left: 3px;
-  }
   .header .dark .header_form_btn .positionModalMenu {
     padding: 0;
   }
@@ -879,7 +910,7 @@ h2:hover::after {
   .header .dark .header_form_btn .positionModalMenu .modalMenu .selectors {
     padding: 0 15px;
   }
-  .header .dark .header_form_destination input:focus + label, .header .dark .header_form_people input:focus + label, .header .dark .check_in:focus + label, .header .dark .check_out:focus + label {
+  .header .dark .header_form_destination input:focus + label, .header .dark .header_form_people input:focus + label {
     transform: translateY(-12px);
     font-size: 12px;
     padding: 0;
