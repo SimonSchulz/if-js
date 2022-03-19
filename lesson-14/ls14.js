@@ -17,6 +17,7 @@ const element = (tag, classes = [], content) => {
     }
     return node
 }
+
 function load(selector, options = {}) {
     let files = []
     const onUpload = options.onUpload;
@@ -94,23 +95,24 @@ function load(selector, options = {}) {
     preview.addEventListener('click', removeHandler);
     upload.addEventListener('click', uploadHandler);
 }
+
 load('#file', {
-     onUpload(files) {
-         if (files.length === 0) {
-             return
-         }
-         for (let file of files) {
-         const formData = new FormData();
-         formData.append("file", file)
-         fetch('https://fe-student-api.herokuapp.com/api/file', {
-             method: 'POST',
-             'Content-type': "multipart/form-data",
-             body: formData
-         })
-             .then((response) => {
-                 return response.json()
-             })
-             .then((response) => console.log(response))
-         }
-     }
+    onUpload(files) {
+        if (files.length === 0) {
+            return
+        }
+        for (let file of files) {
+            const formData = new FormData();
+            formData.append("file", file)
+            fetch('https://fe-student-api.herokuapp.com/api/file', {
+                method: 'POST',
+                'Content-type': "multipart/form-data",
+                body: formData
+            })
+                .then((response) => {
+                    return response.json()
+                })
+                .then((response) => console.log(response))
+        }
+    }
 })
