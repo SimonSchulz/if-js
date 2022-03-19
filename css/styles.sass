@@ -186,8 +186,8 @@
         top: 33%
 
       input
-          font-size: 18px
-          padding: 21px 22px
+        font-size: 18px
+        padding: 21px 22px
 
     .form_destinations
       width: 100%
@@ -195,28 +195,28 @@
       border: none
       border-radius: 8px
       &:focus
-       outline-color: #F5BD41
+        outline-color: #F5BD41
 
     .containerCalendar
-        display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 8px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 8px
 
     .containerCalendar:focus, .activeCalendar
-        border: 1px solid #F5BD41
+      border: 1px solid #F5BD41
 
     .myDiv1, .myDiv2
-        width: 50%
-        font-size: 18px
-        display: flex
-        justify-content: center
-        padding: 20px
-        border: none
-        border-radius: 8px
+      width: 50%
+      font-size: 18px
+      display: flex
+      justify-content: center
+      padding: 20px
+      border: none
+      border-radius: 8px
 
     .myDiv1:focus, .myDiv2:focus
-        outline: none
+      outline: none
 
     .third__inputActive
       border: 3px solid #F5BD41
@@ -231,80 +231,80 @@
         padding: 18px 0
 
     .positionModalMenu
-        .modalMenu
-          padding: 0
-          width: 259px
-          max-height: 256px
-          background: #FFFFFF
-          position: absolute
-          left: -259px
-          top: 70px
-          border-radius: 8px
-          font-size: 16px
-          overflow-y: scroll
-          visibility: hidden
-        .open
-          visibility: visible
-          z-index: 1
+      .modalMenu
+        padding: 0
+        width: 259px
+        max-height: 256px
+        background: #FFFFFF
+        position: absolute
+        left: -259px
+        top: 70px
+        border-radius: 8px
+        font-size: 16px
+        overflow-y: scroll
+        visibility: hidden
+      .open
+        visibility: visible
+        z-index: 1
 
-        .counterContainer
+      .counterContainer
+        display: flex
+        justify-content: space-between
+
+        .namesNumberChanger, .counters
+          margin: 15px
+          display: flex
+          justify-content: space-around
+          flex-direction: column
+
+        .counter
           display: flex
           justify-content: space-between
+          text-align: center
 
-          .namesNumberChanger, .counters
-            margin: 15px
+          .numberChanger
             display: flex
-            justify-content: space-around
-            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            &:first-child
+              margin: 10px
 
-          .counter
-              display: flex
-              justify-content: space-between
-              text-align: center
-
-              .numberChanger
-                display: flex
-                align-items: center
-                justify-content: space-between
-                &:first-child
-                  margin: 10px
-
-              .btnCounterMin, .btnCounterPlus
-                  padding: 5px 7px
-                  height: 30px
-                  width: 30px
-                  border: 1px solid #CECECE
-                  background: #FFF
-                  color: #CECECE
-                  font-size: 18px
-
-              .btnActive
-                border: 1px solid #3077C6
-                color: #3077C6
-
-              .thirdInputs
-                margin: 0 15px
-                text-align: center
-                background: #FFF
-                border: none
-                height: 30px
-                width: 30px
-
-        .addAgeChildren
-          margin: 15px
-          display: none
-          font-size: 14px
-
-        .selectors
-          padding: 0 15px
-          select
-            margin: 7px
-            width: 90px
+          .btnCounterMin, .btnCounterPlus
+            padding: 5px 7px
             height: 30px
+            width: 30px
+            border: 1px solid #CECECE
+            background: #FFF
+            color: #CECECE
+            font-size: 18px
+
+          .btnActive
             border: 1px solid #3077C6
-            cursor: pointer
-            overflow: hidden
-            font-size: 12px
+            color: #3077C6
+
+          .thirdInputs
+            margin: 0 15px
+            text-align: center
+            background: #FFF
+            border: none
+            height: 30px
+            width: 30px
+
+      .addAgeChildren
+        margin: 15px
+        display: none
+        font-size: 14px
+
+      .selectors
+        padding: 0 15px
+        select
+          margin: 7px
+          width: 90px
+          height: 30px
+          border: 1px solid #3077C6
+          cursor: pointer
+          overflow: hidden
+          font-size: 12px
 
     .header_form_destination input:focus~label, .input_filled ~ label
       transform: translateY(-60px)
@@ -673,10 +673,10 @@ h2
         color: #BFBFBF
 
     .reviews_text
-        margin-top: 22px
-        font-size: 18px
-        line-height: 21px
-        color: #383838
+      margin-top: 22px
+      font-size: 18px
+      line-height: 21px
+      color: #383838
 
 .footer
   background: #10367C
@@ -806,53 +806,53 @@ h2
     padding: 0 16px
 
   .header
-        .dark
-          padding-top: 20px
-          padding-bottom: 40px
+    .dark
+      padding-top: 20px
+      padding-bottom: 40px
 
-          h1
-            margin-top: 100px
-            font-size: 40px
+      h1
+        margin-top: 100px
+        font-size: 40px
 
-          .header_form
-            flex-wrap: wrap
-            background-color: #F5BD41
-            padding: 8px
+      .header_form
+        flex-wrap: wrap
+        background-color: #F5BD41
+        padding: 8px
 
+        div
+          padding: 8px
+
+        .header_form_people
+          margin: 0 8px
+
+      .header_link_block
+        display: none
+
+      .hamburger-menu
+        display: block
+
+      .menu__btn
+        display: flex
+
+      .header_store_links
+        margin-top: 40px
+
+      .header_form_btn
+        .positionModalMenu
+          padding: 0
+          .modalMenu
+            top: 10px
+            left: 10px
             div
-              padding: 8px
-
-            .header_form_people
-              margin: 0 8px
-
-          .header_link_block
-            display: none
-
-          .hamburger-menu
-            display: block
-
-          .menu__btn
-            display: flex
-
-          .header_store_links
-            margin-top: 40px
-
-          .header_form_btn
-            .positionModalMenu
               padding: 0
-              .modalMenu
-                top: 10px
-                left: 10px
-                div
-                  padding: 0
-                .selectors
-                  padding: 0 15px
+            .selectors
+              padding: 0 15px
 
-          .header_form_destination input:focus + label, .header_form_people input:focus + label
-            transform: translateY(-12px)
-            font-size: 12px
-            padding: 0
-            color: black
+      .header_form_destination input:focus + label, .header_form_people input:focus + label
+        transform: translateY(-12px)
+        font-size: 12px
+        padding: 0
+        color: black
 
 
   h2
@@ -1006,7 +1006,7 @@ h2
 
       .header_nav_img
         a
-         padding-left: 16px
+          padding-left: 16px
         .night_theme
           width: 16px
           height: 16px
@@ -1018,9 +1018,9 @@ h2
         padding-left: 16px
 
       h1
-       margin-top: 38px
-       font-size: 30px
-       line-height: 36px
+        margin-top: 38px
+        font-size: 30px
+        line-height: 36px
 
       .header_form
         margin-top: 30px
@@ -1039,12 +1039,12 @@ h2
             left: 24px
 
         input
-            font-size: 15px
-            padding: 15px 40px
-            border-radius: 4px
+          font-size: 15px
+          padding: 15px 40px
+          border-radius: 4px
         label
-            font-size: 15px
-            left: 50px
+          font-size: 15px
+          left: 50px
         button
           font-size: 19px
           padding: 15px 40px
@@ -1058,21 +1058,21 @@ h2
 
 
       .header_form_btn
-          .positionModalMenu
-            padding: 0
-            .modalMenu
-              top: 10px
-              left: 10px
-              div
-                padding: 0
-              input
-                padding: 0
-              .selectors
-                padding: 0 15px
+        .positionModalMenu
+          padding: 0
+          .modalMenu
+            top: 10px
+            left: 10px
+            div
+              padding: 0
+            input
+              padding: 0
+            .selectors
+              padding: 0 15px
 
 
       .header_store_links
-          margin-top: 32px
+        margin-top: 32px
 
   .offer
     padding: 18px 0
@@ -1144,7 +1144,7 @@ h2
       display: none
 
   .item_dest:nth-child(3), .reviews_block:nth-child(2)
-   display: none
+    display: none
 
   .reviews
     margin-top: 0
@@ -1215,6 +1215,6 @@ h2
 
 
     .sign
-        font-size: 12px
-        text-align: center
-        margin: 6px auto
+      font-size: 12px
+      text-align: center
+      margin: 6px auto
